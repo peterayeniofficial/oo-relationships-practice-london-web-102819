@@ -21,12 +21,12 @@ class List
   end
 
   def self.find_all_by_city(city)
-    List.all.find_all{|list| list.city == city}
+    self.all.find_all{|list| list.city == city}
   end
 
 
   def self.most_popular
-    most = List.all.max_by {|l| l.trips.size}
+    most = self.all.max_by {|l| l.trips.size}
     most.city
   end
 
